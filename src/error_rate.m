@@ -5,7 +5,7 @@ N = 50; % samples of a single symbol
 
 %% Barker signal generation
 barker_sig = [1 1 -1];
-input_sig = [kron(barker_sig, ones(1, N))];
+input_sig = kron(barker_sig, ones(1, N));
 P_avg_sig = rms(input_sig)^2;
 
 %% Matched filter
